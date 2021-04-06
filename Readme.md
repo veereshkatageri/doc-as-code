@@ -1,4 +1,4 @@
-# SiANOMTech Technical-Documents
+# Readme
 
 The scope of this document is to provide the relevant information related to Technical Documents.
 It covers the step by step instructions to generate the beautiful and easy to maintain technical

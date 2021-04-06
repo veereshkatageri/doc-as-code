@@ -12,7 +12,7 @@ What is Python
 #. Python is an interpreted, object-oriented, high-level programming language with dynamic \
    semantics.
 
-Why it is required?
+Why is it required?
 ===================
 
 #. Python along with additional packages will be used to generate the technical documentation to \
