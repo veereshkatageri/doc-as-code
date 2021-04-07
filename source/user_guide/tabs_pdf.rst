@@ -37,16 +37,9 @@ Basic tabs can be coded as follows:
 
         Oranges are orange.
 
-It can be visualized as follows
+.. attention::
 
-.. hint::
-
-    Credits: `tabs.gif <https://github.com/executablebooks/sphinx-tabs/blob/master/images/tabs.gif>`_
-
-.. image:: ../images/doc-as-code/tabs.gif
-    :width: 640px
-    :align: center
-    :height: 336px
+    It can not be visualized in pdf. See the link `tabs.gif <https://github.com/executablebooks/sphinx-tabs/blob/master/images/tabs.gif>`_
 
 Grouped Tabs
 ------------
@@ -84,16 +77,9 @@ another area. For example:
 
         Windows Line 1
 
-It can be visualized as follows
+.. attention::
 
-.. hint::
-
-    Credits: `groupTabs.gif <https://github.com/executablebooks/sphinx-tabs/blob/master/images/groupTabs.gif>`_
-
-.. image:: ../images/doc-as-code/groupTabs.gif
-    :width: 640px
-    :align: center
-    :height: 291px
+    It can not be visualized in pdf. See the link `groupTabs.gif <https://github.com/executablebooks/sphinx-tabs/blob/master/images/groupTabs.gif>`_
 
 Code Tabs
 ---------
@@ -158,13 +144,6 @@ labels like so:
             def main():
                 return
 
-It can be visualized as follows
+.. attention::
 
-.. hint::
-
-    Credits: `codeTabs.gif <https://github.com/executablebooks/sphinx-tabs/blob/master/images/codeTabs.gif>`_
-
-.. image:: ../images/doc-as-code/codeTabs.gif
-    :width: 640px
-    :align: center
-    :height: 393px
+    It can not be visualized in pdf. See the link `codeTabs.gif <https://github.com/executablebooks/sphinx-tabs/blob/master/images/codeTabs.gif>`_

@@ -78,7 +78,9 @@ class ConanRecipe(ConanFile):
             input_folder = self.source_folder
 
         # -- target build html ----------------------------------------
+        print("Begin generating html")
         try:
+            os.environ["DOCU_GENERATION_TYPE"] = 'generate_html'
             command = subprocess.run(['sphinx-build', '-b', 'html', input_folder, output_folder],
                                      check=True)
 
@@ -87,12 +89,15 @@ class ConanRecipe(ConanFile):
         except subprocess.CalledProcessError as err:
             print(err.output)
 
+        print("End generating html")
+
         # -- target build spelling ----------------------------------------
+        print("Begin spelling check")
         output_folder = os.path.join(self.build_folder, 'package', var_folder_spelling)
         os.makedirs(output_folder, exist_ok=True)
 
-
         try:
+            os.environ["DOCU_GENERATION_TYPE"] = 'spell_check'
             command = subprocess.run(['sphinx-build', '-b', 'spelling', input_folder, output_folder],
                                      check=True)
             output_folder = os.path.join(self.build_folder, 'package', var_folder_spelling)
@@ -101,32 +106,31 @@ class ConanRecipe(ConanFile):
             shutil.make_archive(var_folder_spelling, 'zip', output_folder)
         except subprocess.CalledProcessError as err:
             print(err.output)
+        print("End spelling check")
 
         # -- target build confluence ----------------------------------
-        platform_name = platform.system()
-        if os.environ.get('BRANCH_NAME') is None and os.environ.get('CHANGE_TARGET') is None:
-            print("This is local build. Nothing will be published to confluence")
-        else:
-            if (platform_name == 'Linux' and os.environ.get('BRANCH_NAME') == 'develop' and
-                os.environ.get('CHANGE_TARGET') != 'develop'):
-
-                output_folder = os.path.join(self.build_folder, 'package', var_folder_confluence)
-                os.makedirs(output_folder, exist_ok=True)
+        if (docu_generation_type == 'publish_confluence'):
+            print("Begin publishing to confluence")
+            output_folder = os.path.join(self.build_folder, 'package', var_folder_confluence)
+            os.makedirs(output_folder, exist_ok=True)
             try:
                 command = subprocess.run(['sphinx-build', '-b', 'confluence', input_folder,
-                                          output_folder], check=True)
+                                            output_folder], check=True)
             except subprocess.CalledProcessError as err:
                 print(err.output)
+            print("End publishing to confluence")
 
         # -- target build pdf ----------------------------------------
-        if (docu_generation_type == 'publish_pdf'):
-
+        if (docu_generation_type == 'generate_pdf'):
+            print("Begin generating pdf")
+            os.environ["DOCU_GENERATION_TYPE"] = 'generate_pdf'
             output_folder = os.path.join(self.build_folder, 'package', var_folder_pdf)
             os.makedirs(output_folder, exist_ok=True)
 
             try:
                 # Build to target latex first
-                sphinx_prh.sphinx_build('-b', 'latex', input_folder, output_folder)
+                command = subprocess.run(['sphinx-build', '-b', 'latex', input_folder, output_folder],
+                                        check=True)
 
                 # Identify the tex file
                 tex_file = os.path.join(output_folder, var_tex_file)
@@ -149,21 +153,12 @@ class ConanRecipe(ConanFile):
 
                     # Change directory
                     os.chdir(current_dir)
+                    shutil.make_archive(var_folder_pdf, 'zip', output_folder)
                 else:
                     print("Unable to locate the tex file %s" % tex_file)
+                print("End generating pdf")
 
             except:
                 output = sys.exc_info()[0]
                 print(sys.exc_info())
                 print(output)
-
-    def package(self):
-        self.copy('*.zip', '', keep_path=False)
-
-    def package_id(self):
-        del self.info.settings.os
-        del self.info.settings.arch
-        
-    def deploy(self):
-        self.copy("*")
-        print('deploy method executed')
