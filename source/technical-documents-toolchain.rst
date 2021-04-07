@@ -1,7 +1,7 @@
 .. _technical-documents-toolchain:
 
-Technical documents toolchain
-+++++++++++++++++++++++++++++
+Required toolchain
+++++++++++++++++++
 
 The scope of this document is to gather the documents which are necessary to generate the technical \
 documents.
