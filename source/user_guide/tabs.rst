@@ -39,6 +39,10 @@ Basic tabs can be coded as follows:
 
 It can be visualized as follows
 
+.. hint::
+
+    Credits: `tabs.gif <https://github.com/executablebooks/sphinx-tabs/blob/master/images/tabs.gif>`_
+
 .. image:: ../images/doc-as-code/tabs.gif
     :width: 640px
     :align: center
@@ -81,6 +85,10 @@ another area. For example:
         Windows Line 1
 
 It can be visualized as follows
+
+.. hint::
+
+    Credits: `groupTabs.gif <https://github.com/executablebooks/sphinx-tabs/blob/master/images/groupTabs.gif>`_
 
 .. image:: ../images/doc-as-code/groupTabs.gif
     :width: 640px
@@ -151,6 +159,10 @@ labels like so:
                 return
 
 It can be visualized as follows
+
+.. hint::
+
+    Credits: `codeTabs.gif <https://github.com/executablebooks/sphinx-tabs/blob/master/images/codeTabs.gif>`_
 
 .. image:: ../images/doc-as-code/codeTabs.gif
     :width: 640px
