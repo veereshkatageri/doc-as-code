@@ -9,7 +9,7 @@ documents.
 
 ## About this document
 
-This document is written by Veeresh Katageri and reviewed by SiANOMTech.
+This document is written by Veeresh Katageri.
 
 Only Readme.md document can be read in Github. As mentioned here, the supporting document must be
 downloaded.

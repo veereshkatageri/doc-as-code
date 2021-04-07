@@ -9,24 +9,24 @@ from packaging import version
 
 docu_generation_type = os.environ.get('DOCU_GENERATION_TYPE')
 if docu_generation_type is None:
-    docu_generation_type = 'upload_e2e'
+    docu_generation_type = 'generate_html'
 
 # standard attributes
-var_name = "SiANOMTech_Tools_Documents"
+var_name = "Doc_as_Code_Tools_Documents"
 var_version = "0.0.1"
-var_description = "User manual"
+var_description = "Doc-as-Code User manual"
 
 # customized attribute
 # adjust var_parent_dir_config_file accordingly if it is not a single folder
 var_parent_dir_config_file = 'Tools-Documents'
-var_folder_html = "SiANOMTech_Tools-DocumentsHtml"
-var_folder_spelling = "SiANOMTech_Tools-DocumentsSpelling"
-var_folder_confluence = "SiANOMTech_Tools-DocumentsConfluence"
-var_folder_pdf = "SiANOMTech_Tools-DocumentsPDF"
-var_tex_file = "SiANOMTech_Tools-Documents.tex"
+var_folder_html = "Doc_as_Code_Tools-DocumentsHtml"
+var_folder_spelling = "Doc_as_Code_Tools-DocumentsSpelling"
+var_folder_confluence = "Doc_as_Code_Tools-DocumentsConfluence"
+var_folder_pdf = "Doc_as_Code_Tools-DocumentsPDF"
+var_tex_file = "Doc_as_Code_Tools-Documents.tex"
 
 """
-# TODO: The following part can be ingo
+# TODO: The following part can be ignored
 Read all the publish-related settings
 1. CONFLUENCE_SPACE_NAME is the confluence space name.
 2. CONFLUENCE_SERVER_URL is the confluence server url. 
