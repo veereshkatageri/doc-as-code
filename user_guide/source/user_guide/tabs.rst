@@ -63,7 +63,7 @@ Basic tabs can be coded as follows:
 
     It can be visualized as follows
 
-    .. image:: ../images/tabs.gif
+    .. image:: ../images/doc-as-code/tabs.gif
         :width: 640px
         :align: center
         :height: 336px
@@ -144,7 +144,7 @@ another area. For example:
 
     It can be visualized as follows
 
-    .. image:: ../images/groupTabs.gif
+    .. image:: ../images/doc-as-code/groupTabs.gif
         :width: 640px
         :align: center
         :height: 291px
@@ -349,7 +349,7 @@ labels like so:
 
     It can be visualized as follows
 
-    .. image:: ../images/codeTabs.gif
+    .. image:: ../images/doc-as-code/codeTabs.gif
         :width: 640px
         :align: center
         :height: 393px
