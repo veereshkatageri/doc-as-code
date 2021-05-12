@@ -47,11 +47,13 @@ Working steps
     .. code-block:: bash
 
         cd Technical-Documents/onboarding_template/
-        mkdir build-html
-        cd build-html
-        conan install ..
-        conan build ..
+        python -m venv ./venv
+        .\venv\Scripts\activate.bat
+        pip install -r requirements.txt
+        conan install . -if build -o generate_pdf=True
+        conan build . -bf build
+        .\venv\Scripts\deactivate.bat
 
-#. The above working steps generate the pdf file **Doc_as_Code_Tools-Documents.pdf** under the directory \
-   **package\\\Doc_as_Code_Tools-DocumentsPDF\\**.
+#. The above working steps generate the pdf file **Doc_as_Code_Tools-Documents.pdf** under the \
+   directory **build\\package\\\Doc_as_Code_Tools-DocumentsPDF\\**.
 

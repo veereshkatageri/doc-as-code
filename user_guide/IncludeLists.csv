@@ -1,5 +1,5 @@
 #file_name;generate_html;publish_confluence;generate_pdf;
 index.rst;True;True;True;
+Readme.md;True;True;False;
 source;True;True;True;
-Readme.md;True;True;True;
-onboarding_template;False;False;False;
+venv;False;False;False;

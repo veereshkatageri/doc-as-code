@@ -34,11 +34,18 @@ import sphinx
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #sys.path.insert(0, os.path.abspath('.'))
 
-path_plantuml = os.path.dirname(os.getcwd())
-path_plantuml = os.path.join(path_plantuml, 'Technical-Documents', 'tools', 'plantuml.jar')
+# customized variables
+
+# path plant uml
+path_plantuml = os.path.join(os.path.dirname(os.path.dirname(os.getcwd())), 'doc_as_code',
+                                                             'user_guide', 'tools', 'plantuml.jar')
 print('path_plantuml', path_plantuml)
 plantuml = "java -jar " + path_plantuml
-# customized variables
+
+# spelling wordlists
+spelling_word_list_filename = os.path.join(os.path.dirname(os.path.dirname(os.getcwd())),
+                                                           'Technical-Documents', 'user_guide', 'source',
+                                                           'spelling_wordlist.txt')
 
 DOCU_GENERATION_TYPE = os.environ.get('DOCU_GENERATION_TYPE')
 print('DOCU_GENERATION_TYPE:', DOCU_GENERATION_TYPE)
@@ -243,7 +250,7 @@ language = None
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 if DOCU_GENERATION_TYPE == 'spell_check':
-    excluded_patterns, included_patterns = None, None
+    excluded_patterns, included_patterns = ['venv'], None
 else:
     excluded_patterns, included_patterns = find_exclude_patterns()
 

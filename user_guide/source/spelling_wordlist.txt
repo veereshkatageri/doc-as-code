@@ -80,3 +80,13 @@ readme
 img
 wordlist
 txt
+Cmder
+cmder
+Bugfix
+Powershell
+docAsCode
+experiance
+pre
+linux
+DocAsCodeManaulHtml
+docu

@@ -34,13 +34,11 @@ Related chapters
    user_guide/citations
    user_guide/git_changelog
    user_guide/tabs
-   user_guide/tabs_pdf
    user_guide/math_formulas
    user_guide/display_code_snippets
    user_guide/import_excel_document
    user_guide/including_markdown
    user_guide/including_external_document
-   user_guide/including_external_document_pdf
 
 Overview of related chapters
 ----------------------------

@@ -34,14 +34,26 @@ _____________________________
 
     template_doc_as_code.rst
     template_glossary_doc_as_code.rst
+    template_readme.md
 
-   For example, we cane rename::
+   For example, we can rename::
 
     template_doc_as_code.rst to template_glossary-hello_world.rst
     template_glossary_doc_as_code.rst to template_hellow_world.rst
     template_readme.md to template_readme_hellow_world.md
 
-#. Update IncludeLists.csv. The contents before modification are::
+Update IncludeLists.csv
+^^^^^^^^^^^^^^^^^^^^^^^
+
+.. hint::
+
+    What is IncludeLists.csv
+
+    The IncludeLists.csv is the csv file (partly inspired from the role of CMakeLists.txt of CMake \
+    tool). The IncludeLists.csv gathers the source files and the requirement to publish the \
+    document to different target types from one source code.
+
+The contents before modification are::
 
     #file_name;generate_html;publish_confluence;generate_pdf;
     index.rst;True;True;True;
@@ -49,7 +61,7 @@ _____________________________
     template_doc_as_code.rst;True;True;True;
     template_readme.md;True;True;True;
 
-   After modification, the contents of IncludeLists.csv file will be::
+After modification, the contents of IncludeLists.csv file will be::
 
     #file_name;generate_html;publish_confluence;generate_pdf;
     index.rst;True;True;True;
@@ -71,16 +83,26 @@ Adjustments in conanfile.py and conf.py
 Refer to the chapter :ref:`How to configure conanfile <how-to_configure_conanfile>` to make all \
 necessary adjustments.
 
-How to build the doc-as-code
-----------------------------
+How to build the existing/newly created doc-as-code base after the modification
+-------------------------------------------------------------------------------
 
-#. Go to the folder (no matter existing doc-as-code template or new doc-as-code base) where \
+#. Go to the folder (either existing doc-as-code template or newly created doc-as-code base) where \
    conanfile.py is located.
 #. Perform the following steps::
 
-    mkdir build
-    cd build
-    conan install ..
-    conan build ..
+    cd Technical-Documents/onboarding_template
+    python -m venv ./venv
+    .\venv\Scripts\activate.bat
+    pip install -r requirements.txt
+    conan install . -if build
+    conan build . -bf build
+    .\venv\Scripts\deactivate.bat
 
-#. Read :ref:`how-to_publish_documents` to know more on where generated documents will be located.
+The above working steps generate the html files under the directory \
+**build\\package\\Doc_as_Code_Tools-DocumentsHtml\\**.
+
+**index.html** serves the welcome page. It can be opened in any browser apart from \
+**Internet explorer** in order to visualize the contents.
+
+#. Read :ref:`how-to_publish_documents` to know more on how to generate document to different \
+   targets.

@@ -16,27 +16,23 @@ Working steps
 .. note::
 
     These instructions will translate the contents from doc as code repositories to html format. \
-    During this stage the possible failure messages will be reported in conemu console. Make sure \
+    During this stage the possible failure messages will be reported in Cmder console. Make sure \
     that warnings and failure messages are fixed.
-
-.. attention::
-
-    Do not get confused with the name of build folder here i.e, **build-html**. As this page \
-    demonstrates the rendering to html format, a meaningful name has been chosen. Any name as per \
-    the convenience can be used. 
 
 #. use conan commands as follows.
 
     .. code-block:: bash
 
         cd Technical-Documents/onboarding_template/
-        mkdir build-html
-        cd build-html
-        conan install ..
-        conan build ..
+        python -m venv ./venv
+        .\venv\Scripts\activate.bat
+        pip install -r requirements.txt
+        conan install . -if build
+        conan build . -bf build
+        .\venv\Scripts\deactivate.bat
 
 #. The above working steps generate the html files under the directory \
-   **package\\Doc_as_Code_Tools-DocumentsHtml\\**.
+   **build\\package\\Doc_as_Code_Tools-DocumentsHtml\\**.
 
-#. **index.html** serves the welcome page. It can be opened in any browser in order to preview \
-   the contents.
+#. **index.html** serves the welcome page. It can be opened in any browser apart from \
+   **Internet explorer** in order to visualize the contents.
