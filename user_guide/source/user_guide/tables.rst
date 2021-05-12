@@ -87,6 +87,9 @@ and it results to
 external csv table
 ------------------
 
+Method 1 : csv table
+____________________
+
 The example of csv table syntax is
 
 .. code-block:: bash
@@ -102,6 +105,25 @@ and it results to
    :file: ../documents/doc-as-code/external_csv_table.csv
    :header-rows: 1 
    :widths: 15, 10, 30
+
+Method 2 : csv filter
+_____________________
+
+The example of csv filter syntax is
+
+.. code-block:: bash
+
+    .. csv-filter:: Example Table
+       :delim: U+002C
+       :file: ../documents/doc-as-code/external_csv_table.csv
+       :included_cols: 0,1,2
+
+and it results to
+
+.. csv-filter:: Example Table
+   :delim: U+002C
+   :file: ../documents/doc-as-code/external_csv_table.csv
+   :included_cols: 0,1,2
 
 list-table
 ==========

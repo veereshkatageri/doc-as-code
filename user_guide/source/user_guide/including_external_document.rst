@@ -167,25 +167,41 @@ Please visit the chapter :ref:`reStructuredText without label <restructuredtext_
 Example of embedding multiple external document
 ===============================================
 
-.. hint::
+.. only:: not builder_latex
 
-    The content of the external document **Example Including external document level 1** begins now
+    .. hint::
 
-.. include:: example_including_external_document_level_1.rst
+        The content of the external document **Example Including external document level 1** begins now
 
-.. hint::
+    .. include:: example_including_external_document_level_1.rst
 
-    The content of the external document **Example Including external document level 1** begins now
+    .. hint::
+
+        The content of the external document **Example Including external document level 1** begins now
+
+.. only:: builder_latex
+
+    .. attention::
+
+        Importing document in a document can not be supported in pdf format.
 
 Example of embedding one external document
 ==========================================
 
-.. hint::
+.. only:: not builder_latex
 
-    The content of the external document begins now
+    .. hint::
 
-.. include:: example_including_external_document.rst
+        The content of the external document begins now
 
-.. hint::
+    .. include:: example_including_external_document.rst
 
-    The content of the external document ends now
+    .. hint::
+
+        The content of the external document ends now
+
+.. only:: builder_latex
+
+    .. attention::
+
+        Importing document in a document can not be supported in pdf format.

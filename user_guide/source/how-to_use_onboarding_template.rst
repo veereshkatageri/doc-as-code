@@ -146,7 +146,7 @@ The above working steps generate the html files under the directory \
 Meaning behind individual commands
 ==================================
 
-- **cd ci_schulung/onboarding_template**: change the current working directory to \
+- **cd Technical-Documents/onboarding_template**: change the current working directory to \
   onboarding_template
 - **python -m venv ./venv**: creates a new virtual environment. It is required to create the \
   virtual environment if not exists. Please stick to the name **venv** in order ignore spell check \

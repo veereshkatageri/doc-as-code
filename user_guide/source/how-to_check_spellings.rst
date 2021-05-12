@@ -18,7 +18,7 @@ Working steps
 
     .. code-block:: bash
 
-        cd ci_schulung/onboarding_template
+        cd Technical-Documents/onboarding_template
         python -m venv ./venv
         .\venv\Scripts\activate.bat
         pip install -r requirements.txt
@@ -53,9 +53,9 @@ be performed.
 Where to locate spelling_wordlist.txt
 -------------------------------------
 
-The **ci_schulung/onboarding_template** is already equipped with spell check. The file \
+The **Technical-Documents/onboarding_template** is already equipped with spell check. The file \
 **spelling_wordlist.txt** can be found the under the location \
-**ci_schulung/onboarding_template/source**.
+**Technical-Documents/onboarding_template/source**.
 
 How to add new word
 -------------------

@@ -13,7 +13,7 @@ if docu_generation_type is None:
 
 # standard attributes
 var_name = "Doc_as_Code_Tools_Documents"
-var_version = "0.0.1"
+var_version = "0.0.2"
 var_description = "Doc-as-Code User manual"
 
 # customized attribute

@@ -15,7 +15,7 @@ Defining a glossary
 This directive must contain a reST definition-list-like markup with terms and definitions. \
 The definitions will then be referenceable with the term role. Example:
 
-The following will be an example to showcase how glossary was written for MT4 toolchain
+The following will be an example to showcase how glossary was written
 
 .. code-block:: bash
 
