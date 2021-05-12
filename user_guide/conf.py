@@ -37,7 +37,7 @@ import sphinx
 # customized variables
 
 # path plant uml
-path_plantuml = os.path.join(os.path.dirname(os.path.dirname(os.getcwd())), 'doc_as_code',
+path_plantuml = os.path.join(os.path.dirname(os.path.dirname(os.getcwd())), 'Technical-Documents',
                                                              'user_guide', 'tools', 'plantuml.jar')
 print('path_plantuml', path_plantuml)
 plantuml = "java -jar " + path_plantuml
