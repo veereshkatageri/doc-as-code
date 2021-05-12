@@ -5,7 +5,7 @@ Introduction
 
 This aim of this document is to forecast
 
-#. What is EFS-GH3 doc as code and How it works
+#. What is doc as code and How it works
 #. How to use onboarding template to get hands-on experience with reStructuredText
 #. How to publish documents locally
 
@@ -26,7 +26,7 @@ What is doc as code
 Terminology
 ===========
 
-Before understanding how EFS-GH3 doc as code works, it is required to become familiar with the \
+Before understanding how doc as code works, it is required to become familiar with the \
 following terms
 
 - **reStructuredText** [1]_ (RST, ReST, or reST) is a file format for textual data used primarily \
@@ -56,7 +56,7 @@ following terms
 How it works
 ============
 
-- The EFS-GH3 doc-as-code manual will be written down using reStructuredText.
+- The doc-as-code manual will be written down using reStructuredText.
 - The doc source will be built under python virtual environment using required python packages.
 - The build mechanism uses conan to provide necessary parameters to conf.py so that documents \
   of different target will be generated and segregated.
@@ -66,12 +66,12 @@ How it works
 Big picture
 -----------
 
-The following images forecasts simple workflow how EFS-GH3 toolchain using sphinx, conan and \
+The following images forecasts simple workflow how toolchain using sphinx, conan and \
 Jenkins generates the document using reStructuredText and other entities into possible target types.
 
 .. attention::
 
-    The following image shows the capabilities of EFS-GH3 doc as code toolchain. It does not mean \
+    The following image shows the capabilities of doc as code toolchain. It does not mean \
     the current status. So please do not get confused.
 
 .. image:: images/doc-as-code/big_picture.png
@@ -79,10 +79,10 @@ Jenkins generates the document using reStructuredText and other entities into po
     :align: center
     :height: 370px
 
-What is EFS-GH3 doc as code
-===========================
+What is doc as code
+===================
 
-The EFS-GH3 doc as code offers the relevant information regarding the following
+The doc as code offers the relevant information regarding the following
 
 - How to implement doc-as-code methodology
 - What are the prerequisites
