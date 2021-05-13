@@ -41,13 +41,18 @@ class ConanRecipe(ConanFile):
     settings        = "os", "arch"
     scm             = { "type": "git", "url": "auto", "revision": "auto" }
     no_copy_source  = True
-    options = {}
-    default_options = {}
+    options = {"publish_confluence": [True, False],
+               "generate_pdf": [True, False]}
+    default_options = {
+        "publish_confluence": False,
+        "generate_pdf" : False}
 
     # Set version in configuration file conf.py
     os.environ["version"] = version
 
     def build_requirements(self):
+        print('self.options.generate_pdf:', self.options.generate_pdf)
+
         command = subprocess.check_output(['sphinx-build', '--version']).decode("utf8")
         if not (version.parse(command.strip()) == version.parse("sphinx-build 2.4.4") or
                 version.parse(command.strip()) > version.parse("sphinx-build 2.4.4")):
@@ -125,6 +130,8 @@ class ConanRecipe(ConanFile):
             os.environ["DOCU_GENERATION_TYPE"] = 'generate_pdf'
             output_folder = os.path.join(self.build_folder, 'package', var_folder_pdf)
             os.makedirs(output_folder, exist_ok=True)
+
+            print("Log: folders have been created")
 
             try:
                 # Build to target latex first

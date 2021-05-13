@@ -58,7 +58,7 @@ Original content
 
     # This is a basic workflow to help you get started with Actions
 
-    name: CI
+    name: CI-Onboarding
 
     # Controls when the action will run. 
     on:
@@ -113,7 +113,7 @@ Original content
           - name: Upload Artifacts
             uses: actions/upload-artifact@v2
             with:
-              name: Artifacts
+              name: Artifacts-Onboarding
               path: |
                 ${{github.workspace}}/onboarding_template/build/Doc-as-Code-Tools-Documents-Html.zip
                 ${{github.workspace}}/onboarding_template/build/package/Doc-as-Code-Tools-Documents-PDF/Doc-as-Code-Tools-Documents.pdf

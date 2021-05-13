@@ -14,7 +14,7 @@ var_description = "Doc-as-Code User manual"
 
 # customized attribute
 # adjust var_parent_dir_config_file accordingly if it is not a single folder
-var_parent_dir_config_file = 'Tools-Documents'
+var_parent_dir_config_file = 'user_guide'
 var_folder_html = "Doc-as-Code-Tools-Documents-Html"
 var_folder_spelling = "Doc-as-Code-Tools-Documents-Spelling"
 var_folder_confluence = "Doc-as-Code-Tools-Documents-Confluence"
@@ -134,7 +134,6 @@ class ConanRecipe(ConanFile):
             print("Log: folders have been created")
 
             try:
-                print("Log: Run ")
                 # Build to target latex first
                 command = subprocess.run(['sphinx-build', '-b', 'latex', input_folder, output_folder],
                                         check=True)
