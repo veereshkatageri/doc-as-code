@@ -1,13 +1,35 @@
 .. _cicd_setup:
 
-How to setup CICD
-+++++++++++++++++
+How to setup CICD?
+++++++++++++++++++
 
 The scope of this document is to cover how to setup CICD infrastructure can be used to generate \
 documents continuously.
 
 .. contents:: Table of contents
     :local:
+
+What is GitHub Actions?
+=======================
+
+.. glossary::
+    :sorted:
+
+        GitHub Actions
+          GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from GitHub. Make code reviews, branch management, and issue triaging work the way you want..
+
+How it works
+============
+
+- In order to automate the workflow, the repository should contain a yml file under the directory \
+  .github/workflows/
+- The yml file will containt the actions to automate the workflow.
+- The actions can performed as per the configuration for example
+
+    - for every new commit
+    - for every new commit to a specific branch
+    - for any pull request
+    - for any pull request to a specific branch
 
 What should be avoided
 ======================
@@ -25,7 +47,7 @@ example master branch only.
 Working steps
 =============
 
-The onboarding_template is equipped with ready to use **.github\workflows*\main.yml** file.
+The onboarding_template is equipped with ready to use **.github\workflows*\example-template.yml** file.
 This yml file can be taken as an example when you want to setup your own document generation \
 mechanism using Github actions.
 
