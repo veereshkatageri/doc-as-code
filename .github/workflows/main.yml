@@ -31,14 +31,14 @@ jobs:
           # Optional - x64 or x86 architecture, defaults to x64
           architecture: 'x64'
       # Render documentation to HTML format
-      - name: Generate HTML
+      - name: Generate HTML/PDF
         shell: bash
         run: |
           ls -l ${{github.workspace}}
           python -m venv ./${{github.workspace}}/user_guide/venv
           source ./${{github.workspace}}/user_guide/venv/bin/activate
           pip install -r ${{github.workspace}}/user_guide/requirements.txt
-          conan install ${{github.workspace}}/user_guide -if ${{github.workspace}}/user_guide/build
+          conan install ${{github.workspace}}/user_guide -if ${{github.workspace}}/user_guide/build -o generate_pdf=True
           conan build ${{github.workspace}}/user_guide -bf ${{github.workspace}}/user_guide/build
 
       - name: Check contents
