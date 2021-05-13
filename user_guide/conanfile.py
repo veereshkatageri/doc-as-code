@@ -135,7 +135,10 @@ class ConanRecipe(ConanFile):
             output_folder = os.path.join(self.build_folder, 'package', var_folder_pdf)
             os.makedirs(output_folder, exist_ok=True)
 
-            if 1:
+            print("Log: folders have been created")
+
+            try:
+                print("Log: Run ")
                 # Build to target latex first
                 command = subprocess.run(['sphinx-build', '-b', 'latex', input_folder, output_folder],
                                         check=True)
@@ -145,15 +148,10 @@ class ConanRecipe(ConanFile):
 
                 if os.path.exists(tex_file):
                     # Get current directory
-                    print("Log: Change directory")
                     current_dir = os.getcwd()
-                    print("Log: directory changed")
                     # Change directory where tex file is located
                     parent_dir_texfile = os.path.dirname(tex_file)
                     os.chdir(parent_dir_texfile)
-                    print("Log: directory changed to texfile location")
-                    print("parent_dir_texfile:", parent_dir_texfile)
-                    print("tex_file:", tex_file)
 
                     cmd_generate_pdf = ["pdflatex", tex_file]
 
@@ -161,19 +159,17 @@ class ConanRecipe(ConanFile):
                     It is known issue that the Miktex console command pdflatex will not generate
                     the index in PDF file. So it is required to run the same command twice
                     """
-                    print("Run command")
                     command = subprocess.check_output(cmd_generate_pdf).decode("utf8")
                     command = subprocess.check_output(cmd_generate_pdf).decode("utf8")
 
-                    print("change directory back")
                     # Change directory
                     os.chdir(current_dir)
                     shutil.make_archive(var_folder_pdf, 'zip', output_folder)
-                    print("done with archive")
                 else:
                     print("Unable to locate the tex file %s" % tex_file)
                 print("End generating pdf")
-            else:
+
+            except:
                 output = sys.exc_info()[0]
                 print(sys.exc_info())
                 print(output)
