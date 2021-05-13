@@ -50,4 +50,6 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: Artifacts
-          path: ${{github.workspace}}/user_guide/build/*.zip
+          path: |
+            ${{github.workspace}}/user_guide/build/Doc-as-Code-Tools-Documents-Html.zip
+            ${{github.workspace}}/user_guide/build/package/Doc-as-Code-Tools-Documents-PDF/Doc-as-Code-Tools-Documents.pdf

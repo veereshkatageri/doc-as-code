@@ -80,7 +80,6 @@ Original content
 
         # Steps represent a sequence of tasks that will be executed as part of the job
         steps:
-          - name: Checkout repository
           - uses: actions/checkout@v2
           - name: Set up Python 3.x
             uses: actions/setup-python@v2
@@ -109,7 +108,9 @@ Original content
             uses: actions/upload-artifact@v1
             with:
               name: Artifacts
-              path: ${{github.workspace}}/onboarding_template/build/*.zip
+              path: |
+                ${{github.workspace}}/onboarding_template/build/Doc-as-Code-Tools-Documents-Html.zip
+                ${{github.workspace}}/onboarding_template/build/package/Doc-as-Code-Tools-Documents-PDF/Doc-as-Code-Tools-Documents.pdf
 
 What to modify
 --------------
