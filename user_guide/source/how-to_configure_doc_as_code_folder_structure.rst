@@ -27,10 +27,10 @@ _____________________________
 
    .. code-block:: bash
 
-        onboarding_template/
-        Readme.md
+        onboarding_template
 
-#. Rename existing rst files as per the requirement. The existing rst files are::
+#. Rename existing rst files as per the requirement. The existing rst under the directory \
+   onboarding_template//source are files are::
 
     template_doc_as_code.rst
     template_glossary_doc_as_code.rst
@@ -42,8 +42,8 @@ _____________________________
     template_glossary_doc_as_code.rst to template_hellow_world.rst
     template_readme.md to template_readme_hellow_world.md
 
-Update IncludeLists.csv
-^^^^^^^^^^^^^^^^^^^^^^^
+Update source/IncludeLists.csv
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. hint::
 
@@ -99,10 +99,25 @@ How to build the existing/newly created doc-as-code base after the modification
     .\venv\Scripts\deactivate.bat
 
 The above working steps generate the html files under the directory \
-**build\\package\\Doc_as_Code_Tools-DocumentsHtml\\**.
+**build\\package\\Doc-as-Code-Tools-Documents-Html\\**.
 
 **index.html** serves the welcome page. It can be opened in any browser apart from \
 **Internet Explorer** in order to visualize the contents.
 
 #. Read :ref:`how-to_publish_documents` to know more on how to generate document to different \
    targets.
+
+.. hint::
+
+    The working steps are similar if you create a new folder. For example consider the name of \
+    new folder is **hello_world**. The working steps can be performed as follows.
+
+    .. code-block:: bash
+
+        cd hello_world
+        python -m venv ./venv
+        .\venv\Scripts\activate.bat
+        pip install -r requirements.txt
+        conan install . -if build
+        conan build . -bf build
+        .\venv\Scripts\deactivate.bat

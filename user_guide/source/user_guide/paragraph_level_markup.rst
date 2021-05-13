@@ -36,14 +36,14 @@ Example::
 
     .. note::
 
-        Use installation manual provided by Doc_as_Code to generate documentation and to experiment with doc-as-code \
-        methodology.
+        Use installation manual provided by Doc-as-Code to generate documentation and to \
+        experiment with doc-as-code methodology.
 
 The above example results in
 
 .. note::
 
-    Use manual provided by Doc_as_Code to generate documentation and to experiment with doc-as-code \
+    Use manual provided by Doc-as-Code to generate documentation and to experiment with doc-as-code \
     methodology.
 
 

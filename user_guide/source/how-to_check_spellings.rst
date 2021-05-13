@@ -27,10 +27,10 @@ Working steps
         .\venv\Scripts\deactivate.bat
 
 #. The above working steps generate the .spelling files under the directory \
-   **build\\package\\Doc_as_Code_Tools-DocumentsSpelling\\**.
+   **build\\package\\Doc-as-Code-Tools-Documents-Spelling\\**.
 
 #. For example the existing spelling mistakes in this repository will be available under \
-   **package\\Doc_as_Code_Tools-DocumentsSpelling\\source\CHANGELOG.spelling**.
+   **package\\Doc-as-Code-Tools-Documents-Spelling\\source\CHANGELOG.spelling**.
 
 #. The content of the above file will be as shown below
 

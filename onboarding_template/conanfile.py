@@ -7,23 +7,19 @@ import subprocess
 import platform
 from packaging import version
 
-docu_generation_type = os.environ.get('DOCU_GENERATION_TYPE')
-if docu_generation_type is None:
-    docu_generation_type = 'generate_html'
-
 # standard attributes
-var_name = "Doc_as_Code_Tools_Documents"
+var_name = "Doc-as-Code-Tools-Documents"
 var_version = "0.0.1"
 var_description = "User manual"
 
 # customized attribute
 # adjust var_parent_dir_config_file accordingly if it is not a single folder
 var_parent_dir_config_file = 'onboarding_template'
-var_folder_html = "Doc_as_Code_Tools-DocumentsHtml"
-var_folder_spelling = "Doc_as_Code_Tools-DocumentsSpelling"
-var_folder_confluence = "Doc_as_Code_Tools-DocumentsConfluence"
-var_folder_pdf = "Doc_as_Code_Tools-DocumentsPDF"
-var_tex_file = "Doc_as_Code_Tools-Documents.tex"
+var_folder_html = "Doc-as-Code-Tools-Documents-Html"
+var_folder_spelling = "Doc-as-Code-Tools-Documents-Spelling"
+var_folder_confluence = "Doc-as-Code-Tools-Documents-Confluence"
+var_folder_pdf = "Doc-as-Code-Tools-Documents-PDF"
+var_tex_file = "Doc-as-Code-Tools-Documents.tex"
 
 """
 # TODO: The following part can be ignored

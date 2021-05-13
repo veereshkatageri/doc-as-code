@@ -136,7 +136,7 @@ How to build onboarding_template
         .\venv\Scripts\deactivate.bat
 
 The above working steps generate the html files under the directory \
-**build\\package\\Doc_as_Code_Tools-DocumentsHtml\\**.
+**build\\package\\Doc-as-Code-Tools-Documents-Html\\**.
 
 **index.html** serves the welcome page. It can be opened in any browser apart from \
 **Internet Explorer** in order to visualize the contents.

@@ -30,18 +30,6 @@ Requirements
 Working steps
 =============
 
-.. attention::
-
-    Do not get confused with the name of build folder here i.e, **build-pdf**. As this page \
-    demonstrates the rendering to pdf format, a meaningful name has been chosen. Any name as per \
-    the convenience can be used. 
-
-#. set the variable using ConanShell
-
-    .. code-block:: bash
-
-        set DOCU_GENERATION_TYPE=generate_pdf
-
 #. use conan commands as follows.
 
     .. code-block:: bash
@@ -54,6 +42,6 @@ Working steps
         conan build . -bf build
         .\venv\Scripts\deactivate.bat
 
-#. The above working steps generate the pdf file **Doc_as_Code_Tools-Documents.pdf** under the \
-   directory **build\\package\\\Doc_as_Code_Tools-DocumentsPDF\\**.
+#. The above working steps generate the pdf file **Doc-as-Code-Tools-Documents.pdf** under the \
+   directory **build\\package\\\Doc-as-Code-Tools-Documents-PDF\\**.
 

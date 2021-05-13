@@ -1,12 +1,12 @@
 .. _index:
 
-Doc_as_Code Technical-Documents
+Doc-as-Code Technical-Documents
 +++++++++++++++++++++++++++++++
 
 About this document
 ===================
 
-:Info: Doc_as_Code Technical-Documents
+:Info: Doc-as-Code Technical-Documents
 :Author: Katageri, Veeresh <Veeresh.mcis@gmail.com>
 :Date: |today|
 :Revision: Revision: 0.0.1
