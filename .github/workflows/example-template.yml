@@ -45,9 +45,9 @@ jobs:
           conan install ${{github.workspace}}/onboarding_template -if ${{github.workspace}}/onboarding_template/build -o generate_pdf=True
           conan build ${{github.workspace}}/onboarding_template -bf ${{github.workspace}}/onboarding_template/build
 
-      # Upload Artifacts (HTML and PDF)
-      - name: Upload Artifacts (HTML and PDF)
-        uses: actions/upload-artifact@v1
+      # Upload Artifacts
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v2
         with:
           name: Artifacts
           path: |
