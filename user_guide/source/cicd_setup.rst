@@ -64,9 +64,15 @@ Original content
     on:
       # Triggers the workflow on push or pull request events but only for the master branch
       push:
-        branches: [ master ]
+        # Trigger the workflow on push or pull request
+        # but only for master and develop branch
+        branches:
+          - 'master'
+          - 'develop'
       pull_request:
-        branches: [ master ]
+        branches:
+          - 'master'
+          - 'develop'
 
       # Allows you to run this workflow manually from the Actions tab
       workflow_dispatch:
@@ -103,7 +109,6 @@ Original content
               conan install ${{github.workspace}}/onboarding_template -if ${{github.workspace}}/onboarding_template/build -o generate_pdf=True
               conan build ${{github.workspace}}/onboarding_template -bf ${{github.workspace}}/onboarding_template/build
 
-
           # Upload Artifacts
           - name: Upload Artifacts
             uses: actions/upload-artifact@v2
@@ -112,7 +117,6 @@ Original content
               path: |
                 ${{github.workspace}}/onboarding_template/build/Doc-as-Code-Tools-Documents-Html.zip
                 ${{github.workspace}}/onboarding_template/build/package/Doc-as-Code-Tools-Documents-PDF/Doc-as-Code-Tools-Documents.pdf
-
 What to modify
 --------------
 
