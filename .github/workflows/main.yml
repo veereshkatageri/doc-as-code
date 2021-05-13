@@ -52,5 +52,5 @@ jobs:
       - name: Upload zip (HTML)
         uses: actions/upload-artifact@v1
         with:
-          path: ./${{github.workspace}}/user_guide/build/Doc_as_Code_Tools-DocumentsHtml.zip
           name: Doc_as_Code_Tools-DocumentsHtml.zip
+          path: ${{github.workspace}}/user_guide/build/Doc_as_Code_Tools-DocumentsHtml.zip
