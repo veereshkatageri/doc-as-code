@@ -135,7 +135,7 @@ class ConanRecipe(ConanFile):
             output_folder = os.path.join(self.build_folder, 'package', var_folder_pdf)
             os.makedirs(output_folder, exist_ok=True)
 
-            try:
+            if 1:
                 # Build to target latex first
                 command = subprocess.run(['sphinx-build', '-b', 'latex', input_folder, output_folder],
                                         check=True)
@@ -152,6 +152,8 @@ class ConanRecipe(ConanFile):
                     parent_dir_texfile = os.path.dirname(tex_file)
                     os.chdir(parent_dir_texfile)
                     print("Log: directory changed to texfile location")
+                    print("parent_dir_texfile:", parent_dir_texfile)
+                    print("tex_file:", tex_file)
 
                     cmd_generate_pdf = ["pdflatex", tex_file]
 
@@ -171,8 +173,7 @@ class ConanRecipe(ConanFile):
                 else:
                     print("Unable to locate the tex file %s" % tex_file)
                 print("End generating pdf")
-
-            except:
+            else:
                 output = sys.exc_info()[0]
                 print(sys.exc_info())
                 print(output)
