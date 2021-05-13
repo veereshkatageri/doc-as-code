@@ -31,9 +31,16 @@ jobs:
           # Optional - x64 or x86 architecture, defaults to x64
           architecture: 'x64'
       # Display the content of the workspace
-      - name: Display Contents
+      - name: Generate HTML
         shell: bash
-        run: ls -l ${{github.workspace}}
+        run: |
+          ls -l ${{github.workspace}}
+          python -m venv ./${{github.workspace}}/user_guide/venv
+          source ./${{github.workspace}}/user_guide/venv/bin/activate
+          pip install -r ${{github.workspace}}/user_guide/requirements.txt
+          conan install ${{github.workspace}}/user_guide -if ${{github.workspace}}/user_guide/build
+          conan build ${{github.workspace}}/user_guide -bf ${{github.workspace}}/user_guide/build
+
       # You can test your matrix by printing the current Python version
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
