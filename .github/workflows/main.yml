@@ -40,7 +40,6 @@ jobs:
           pip install -r ${{github.workspace}}/user_guide/requirements.txt
           conan install ${{github.workspace}}/user_guide -if ${{github.workspace}}/user_guide/build
           conan build ${{github.workspace}}/user_guide -bf ${{github.workspace}}/user_guide/build
-          source ./${{github.workspace}}/user_guide/venv/bin/deactivate
 
       - name: Check contents
         shell: bash
