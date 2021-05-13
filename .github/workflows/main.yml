@@ -41,6 +41,13 @@ jobs:
           conan install ${{github.workspace}}/user_guide -if ${{github.workspace}}/user_guide/build
           conan build ${{github.workspace}}/user_guide -bf ${{github.workspace}}/user_guide/build
 
+      - name: Check contents
+        shell: bash
+        run: |
+          ls -l ${{github.workspace}}
+          ls -l ${{github.workspace}}/user_guide
+          ls -l ${{github.workspace}}/user_guide/build
+
       # Upload zip (HTML)
       - name: Upload zip (HTML)
         uses: actions/upload-artifact@v1
