@@ -135,13 +135,18 @@ class ConanRecipe(ConanFile):
             output_folder = os.path.join(self.build_folder, 'package', var_folder_pdf)
             os.makedirs(output_folder, exist_ok=True)
 
+            print("Log: folders have been created")
+
             try:
+                print("Log: Run sphinx-build -b latex")
                 # Build to target latex first
                 command = subprocess.run(['sphinx-build', '-b', 'latex', input_folder, output_folder],
                                         check=True)
 
+                print("Log: find tex file")
                 # Identify the tex file
                 tex_file = os.path.join(output_folder, var_tex_file)
+                print("Log: file exists")
 
                 if os.path.exists(tex_file):
                     # Get current directory
