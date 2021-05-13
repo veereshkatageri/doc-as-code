@@ -56,7 +56,7 @@ Original content
 
 .. code-block:: bash
 
-    # This is a basic workflow to help you get started with Actions
+# This is a basic workflow to help you get started with Actions
 
     name: CI
 
@@ -80,6 +80,7 @@ Original content
 
         # Steps represent a sequence of tasks that will be executed as part of the job
         steps:
+          - name: Checkout repository
           - uses: actions/checkout@v2
           - name: Set up Python 3.x
             uses: actions/setup-python@v2
@@ -88,7 +89,7 @@ Original content
               python-version: '3.x'
               # Optional - x64 or x86 architecture, defaults to x64
               architecture: 'x64'
-          - name: Install miktex
+          - name: Install texlive
             shell: bash
             run: |
               sudo apt install -y texlive texlive-latex-extra
@@ -103,29 +104,12 @@ Original content
               conan install ${{github.workspace}}/onboarding_template -if ${{github.workspace}}/onboarding_template/build -o generate_pdf=True
               conan build ${{github.workspace}}/onboarding_template -bf ${{github.workspace}}/onboarding_template/build
 
-          - name: Check contents
-            shell: bash
-            run: |
-              ls -l ${{github.workspace}}
-              ls -l ${{github.workspace}}/onboarding_template
-              ls -l ${{github.workspace}}/onboarding_template/build
-              ls -l ${{github.workspace}}/onboarding_template/build/package/
-              ls -l ${{github.workspace}}/onboarding_template/build/package/Doc-as-Code-Tools-DocumentsPDF
-
-          # Upload zip (HTML)
-          - name: Upload zip (HTML)
+          # Upload Artifacts (HTML and PDF)
+          - name: Upload Artifacts (HTML and PDF)
             uses: actions/upload-artifact@v1
             with:
-              name: Doc-as-Code-Tools-DocumentsHtml.zip
-              path: ${{github.workspace}}/onboarding_template/build/Doc-as-Code-Tools-DocumentsHtml.zip
-
-          # Upload PDF
-          - name: Upload PDF
-            uses: actions/upload-artifact@v1
-            with:
-              name: Doc-as-Code-Tools-Documents.pdf
-              path: ${{github.workspace}}/onboarding_template/build/Doc-as-Code-Tools-DocumentsPDF/Doc-as-Code-Tools-Documents.pdf
-
+              name: Artifacts
+              path: ${{github.workspace}}/onboarding_template/build/*.zip
 
 What to modify
 --------------
