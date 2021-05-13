@@ -33,7 +33,7 @@ jobs:
       - name: Install miktex
         shell: bash
         run: |
-          apt install -y texlive texlive-latex-extra
+          sudo apt install -y texlive texlive-latex-extra
         # Render documentation to HTML format
       - name: Generate HTML/PDF
         shell: bash
