@@ -30,7 +30,11 @@ jobs:
           python-version: '3.x'
           # Optional - x64 or x86 architecture, defaults to x64
           architecture: 'x64'
-      # Render documentation to HTML format
+      - name: Install miktex
+        shell: bash
+        run: |
+          apt install -y texlive texlive-latex-extra
+        # Render documentation to HTML format
       - name: Generate HTML/PDF
         shell: bash
         run: |
