@@ -30,7 +30,7 @@ jobs:
           python-version: '3.x'
           # Optional - x64 or x86 architecture, defaults to x64
           architecture: 'x64'
-      # Display the content of the workspace
+      # Render documentation to HTML format
       - name: Generate HTML
         shell: bash
         run: |
@@ -41,13 +41,9 @@ jobs:
           conan install ${{github.workspace}}/user_guide -if ${{github.workspace}}/user_guide/build
           conan build ${{github.workspace}}/user_guide -bf ${{github.workspace}}/user_guide/build
 
-      # Upload Zip file
-      - name: Upload Zip
-        uses: actions/upload-release-asset@v1
-        env:
-          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+      # Upload zip (HTML)
+      - name: Upload zip (HTML)
+        uses: actions/upload-artifact@v1
         with:
-          upload_url: ${{github.event.release.upload_url}}
-          asset_path: ./${{github.workspace}}/user_guide/build/Doc_as_Code_Tools-DocumentsHtml.zip
-          asset_name: ${{github.workspace}}/user_guide/build/Doc_as_Code_Tools-DocumentsHtml.zip
-          asset_content_type: application/zip
+          path: ./${{github.workspace}}/user_guide/build/Doc_as_Code_Tools-DocumentsHtml.zip
+          name: Doc_as_Code_Tools-DocumentsHtml.zip
