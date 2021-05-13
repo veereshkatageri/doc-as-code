@@ -15,15 +15,15 @@ What is GitHub Actions?
 .. glossary::
     :sorted:
 
-        GitHub Actions
-          GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from GitHub. Make code reviews, branch management, and issue triaging work the way you want..
+    GitHub Actions
+      GitHub Actions makes it easy to automate all your software workflows, now with world-class CI/CD. Build, test, and deploy your code right from GitHub. Make code reviews, branch management, and issue triaging work the way you want..
 
 How it works
 ============
 
 - In order to automate the workflow, the repository should contain a yml file under the directory \
   .github/workflows/
-- The yml file will containt the actions to automate the workflow.
+- The yml file will contain the actions to automate the workflow.
 - The actions can performed as per the configuration for example
 
     - for every new commit
