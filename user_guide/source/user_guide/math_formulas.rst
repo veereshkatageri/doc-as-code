@@ -3,7 +3,7 @@
 Math formulas
 +++++++++++++
 
-This page is intended to show how to use math formulas in doc as code.
+This page is intended to show how to use math formulas in doc-as-code.
 
 .. contents:: Table of contents
     :local:

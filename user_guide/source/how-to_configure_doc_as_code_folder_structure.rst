@@ -1,7 +1,7 @@
 .. _how-to_configure_doc_as_code_folder_structure:
 
-How to configure doc-as-code folder structure
-+++++++++++++++++++++++++++++++++++++++++++++
+How to configure doc-as-code folder structure?
+++++++++++++++++++++++++++++++++++++++++++++++
 
 This page is intended to provide the instructions on how to configure the folder structure using \
 doc-as-code template as reference in order to create new base for the documentation.
@@ -102,7 +102,7 @@ The above working steps generate the html files under the directory \
 **build\\package\\Doc_as_Code_Tools-DocumentsHtml\\**.
 
 **index.html** serves the welcome page. It can be opened in any browser apart from \
-**Internet explorer** in order to visualize the contents.
+**Internet Explorer** in order to visualize the contents.
 
 #. Read :ref:`how-to_publish_documents` to know more on how to generate document to different \
    targets.

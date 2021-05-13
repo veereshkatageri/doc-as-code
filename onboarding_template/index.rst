@@ -19,7 +19,7 @@
    and so on
    ^^^^^^^^^^
 
-On-boarding guide doc as code toolchain
+On-boarding guide doc-as-code toolchain
 +++++++++++++++++++++++++++++++++++++++
 
 .. Hint: add the description or the scope of the document 

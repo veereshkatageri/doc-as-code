@@ -109,19 +109,22 @@ class ConanRecipe(ConanFile):
         print("End spelling check")
 
         # -- target build confluence ----------------------------------
-        if (docu_generation_type == 'publish_confluence'):
+        if (self.options.publish_confluence):
             print("Begin publishing to confluence")
+            os.environ["DOCU_GENERATION_TYPE"] = 'publish_confluence'
             output_folder = os.path.join(self.build_folder, 'package', var_folder_confluence)
             os.makedirs(output_folder, exist_ok=True)
             try:
                 command = subprocess.run(['sphinx-build', '-b', 'confluence', input_folder,
                                             output_folder], check=True)
+                # make archieve
+                shutil.make_archive(var_folder_confluence, 'zip', output_folder)
             except subprocess.CalledProcessError as err:
                 print(err.output)
             print("End publishing to confluence")
 
         # -- target build pdf ----------------------------------------
-        if (docu_generation_type == 'generate_pdf'):
+        if (self.options.generate_pdf):
             print("Begin generating pdf")
             os.environ["DOCU_GENERATION_TYPE"] = 'generate_pdf'
             output_folder = os.path.join(self.build_folder, 'package', var_folder_pdf)

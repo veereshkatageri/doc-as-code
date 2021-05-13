@@ -1,7 +1,7 @@
 .. _how-to_check_spellings:
 
-How to check spelling mistakes
-++++++++++++++++++++++++++++++
+How to check spelling mistakes?
++++++++++++++++++++++++++++++++
 
 This page is intended to guide you how to check spellings recursively while generating the \
 documents.

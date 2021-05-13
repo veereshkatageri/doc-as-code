@@ -1,7 +1,7 @@
 .. _how-to_publish_documents:
 
-How to publish documents
-++++++++++++++++++++++++
+How to publish documents?
++++++++++++++++++++++++++
 
 This page is intended to guide you the following with the help of onboarding template.
 
@@ -9,7 +9,7 @@ This page is intended to guide you the following with the help of onboarding tem
 #. Publishing documents to Confluence
 #. Rendering to PDF
 
-All three publishing mechanism will be supported by doc as code toolchain.
+All three publishing mechanism will be supported by doc-as-code toolchain.
 
 .. contents:: Table of contents
     :local:
@@ -18,6 +18,7 @@ All three publishing mechanism will be supported by doc as code toolchain.
    :maxdepth: 1
 
    how-to_render_doc_as_code_to_html
+   how-to_publish_documents_to_confluence
    how-to_render_doc_as_code_to_pdf
    how-to_check_spellings
 

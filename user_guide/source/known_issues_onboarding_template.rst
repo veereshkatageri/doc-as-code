@@ -3,7 +3,7 @@
 Known issues onboarding template
 ++++++++++++++++++++++++++++++++
 
-This page is intended to document the known issues of document publish mechanism to confluence \
+This page is intended to document the known issues of the document publish mechanism to confluence \
 using doc-as-code toolchain.
 
 .. contents:: Table of contents
@@ -130,5 +130,6 @@ The following error may occur if graphviz is not installed.
     :align: center
     :height: 225px
 
-- Go to `Graphviz - Graph Visualization Software <https://graphviz.org/about/>`_ for more info.
-- If the platform is windows, please choose the stable version.
+- Go to `Graphviz - Graph Visualization Software <https://graphviz.org/about/>`_ for more info and \
+  install graphviz properly.
+- If the platform is windows, please choose a stable version.

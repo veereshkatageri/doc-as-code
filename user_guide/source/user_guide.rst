@@ -56,8 +56,7 @@ The following table gives quick insight on significance of individual chapter.
        - Inline markup, special characters
        - Headings
    * - :ref:`internal_and_external_links`
-     - - External links
-       - Implicit links
+     - External/Implicit links
    * - :ref:`list_and_bullets`
      - - Bullet lists
        - Numbered lists
@@ -69,40 +68,30 @@ The following table gives quick insight on significance of individual chapter.
    * - :ref:`paragraph_level_markup`
      - Admonition likes note, hint, attention
    * - :ref:`images`
-     - - Images with caption
-       - Image without caption
+     - - Images with and without caption
        - Relative path
    * - :ref:`body_elements`
-     - - Table of contents
-       - Footnotes
+     - Table of contents/Footnotes
    * - :ref:`special_tables`
-     - - Tables
-       - CSV Table
+     - Tables/CSV Table
    * - :ref:`glossary`
-     - - Defining glossary
-       - Using glossary
+     - Defining and Using glossary
    * - :ref:`comments`
-     - - Single line
-       - Multiline
+     - Single/Multiline
    * - :ref:`citations`
      - Citations
    * - :ref:`git_changelog`
      - Git changelog
    * - :ref:`tabs`
-     - - Basic tabs
-       - Grouped tabs
-       - Code tabs
+     - Basic, Grouped and Code tabs
    * - :ref:`math_formulas`
-     - - Mathematics formulas
-       - cross-referencing equations
+     - Mathematics formulas and cross-referencing equations
    * - :ref:`display_code_snippets`
-     - - Integrating with code-block
-       - Integrating with tabs
+     - Integrating with code-block/tabs
    * - :ref:`import_excel_document`
-     - - Integrating excel document in doc as code
+     - Integrating excel document in doc-as-code
    * - :ref:`including_markdown`
-     - - Integrating markdown to doc as code
-       - Integrating to toctree
+     - How to include to markdown into doc-as-code
    * - :ref:`including_external_document`
      - - Include rst in another rst
        - Advantages and Disadvantages

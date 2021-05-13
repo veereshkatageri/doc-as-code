@@ -1,7 +1,7 @@
 .. _how-to_use_onboarding_template:
 
-How to use onboarding template
-++++++++++++++++++++++++++++++
+How to use onboarding template?
++++++++++++++++++++++++++++++++
 
 This page is intended to provide the instructions on how to use the onboarding template in order \
 to get hands on experience.
@@ -44,7 +44,7 @@ Folder structure
 
 where
 
-- onboarding_template is the ready to use template folder and is the place holder to begin with \
+- onboarding_template is the ready to use template folder and is the placeholder to begin with \
   the modifications
 
 Folder structure onboarding_template
@@ -61,8 +61,8 @@ Folder structure onboarding_template
     tools/
     requirements.txt
 
-- conanfile.py provides a privilege either render the doc (in .rst) to html file or to publish \
-  the documents to confluence
+- conanfile.py implements a mechanism to render the doc (in .rst) to html file, to check spellings \
+  or to render the doc (in .rst) to pdf and to publish the documents to confluence
 - conf.py is the configuration file which translates the .rst files to html or it will publish the \
   documents to confluence
 - IncludeLists.csv is the csv file which decides where to include a documentation file or a folder \
@@ -76,10 +76,10 @@ Folder structure onboarding_template
     - serves welcome page
     - used to connect multiple files to a single hierarchy of documents
 
-- source : a place holder which contains the literature. It is recommended to add new files or \
+- source : a placeholder which contains the literature. It is recommended to add new files or \
   modify the existing files under this folder
-- style : a place holder which contain style sheet and themes
-- tools : contains plantuml.jar in order to generate class diagram.
+- style : a placeholder which contain style sheet and themes
+- tools : contains plantuml.jar in order to generate class diagrams.
 - requirements.txt : contains all the required python packages to generate the documentation.
 
 .. code-block:: bash
@@ -93,7 +93,7 @@ Folder structure onboarding_template
 
 where
 
-- images : a place holder to store the images
+- images : a placeholder to store the images
 - template_glossary_doc_as_code.rst : a ready to use template file which contains glossaries
 - template_doc_as_code.rst : a ready to use template file which contains hierarchy of chapters and subchapters
 - template_readme.md : a ready to use markdown file
@@ -139,7 +139,7 @@ The above working steps generate the html files under the directory \
 **build\\package\\Doc_as_Code_Tools-DocumentsHtml\\**.
 
 **index.html** serves the welcome page. It can be opened in any browser apart from \
-**Internet explorer** in order to visualize the contents.
+**Internet Explorer** in order to visualize the contents.
 
 #. Read :ref:`how-to_publish_documents` to know more on where generated documents will be located.
 
@@ -173,13 +173,13 @@ Related chapters
 
 .. note::
 
-    If you have got the hands on experience with onboarding_template with respect to changing the \
+    If you have got the first hands on experience with onboarding_template with respect to changing the \
     existing **.rst** files, adding new files and adjusting IncludeLists.csv, then the following \
-    related chapters will navigate you what to do next
+    related chapters will navigate you to what can be done next.
 
 #. How to configure doc-as-code folder structure, visit \
    :ref:`how-to_configure_doc_as_code_folder_structure`
 #. How to configure conanfile, visit :ref:`how-to_configure_conanfile`
-#. How to render doc as code to html (Publish to HTML), visit :ref:`how-to_render_doc_as_code_to_html`
-#. How to render doc as code to pdf (Publish to PDF), visit :ref:`how-to_render_doc_as_code_to_pdf`
+#. How to render doc-as-code to html (Publish to HTML), visit :ref:`how-to_render_doc_as_code_to_html`
+#. How to render doc-as-code to pdf (Publish to PDF), visit :ref:`how-to_render_doc_as_code_to_pdf`
 #. How to configure doc-as-code from scratch, visit :ref:`how-to_configure_doc_as_code_folder_structure`

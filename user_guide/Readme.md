@@ -5,8 +5,8 @@
     * What is DocAsCode Manual
     * Prerequisites
 
-- This repository is the source of all doc as code documentation.
-- This repository is a base or reference over which doc as code manual have been generated.
+- This repository is the source of all doc-as-code documentation.
+- This repository is a base or reference over which doc-as-code manual have been generated.
 - The documentations are written down in reStructuredText (.rst) format and in markdown (.md).
 
 Table of contents
@@ -27,7 +27,7 @@ Table of contents
 ## DocAsCode Manual
 
 - The docAsCode manual contains the doc-as-code toolchain relevant documentation in a bundle
-- Using python package sphinx, the doc as code will be generated to different target types like HTML and Confluence.
+- Using python package sphinx, the doc-as-code will be generated to different target types like HTML and Confluence.
 
 ### Why should I use DocAsCode Manual
 The following are documented thoroughly

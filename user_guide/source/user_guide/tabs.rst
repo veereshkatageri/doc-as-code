@@ -3,7 +3,7 @@
 Tabs
 ++++
 
-This page is intended to show how to use tabs in doc as code.
+This page is intended to show how to use tabs in doc-as-code.
 
 .. contents:: Table of contents
     :local:

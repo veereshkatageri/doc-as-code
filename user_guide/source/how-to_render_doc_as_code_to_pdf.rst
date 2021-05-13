@@ -1,9 +1,9 @@
 .. _how-to_render_doc_as_code_to_pdf:
 
-How to render doc as code to pdf (Publish to PDF)
-+++++++++++++++++++++++++++++++++++++++++++++++++
+How to render doc-as-code to pdf (Publish to PDF)?
+++++++++++++++++++++++++++++++++++++++++++++++++++
 
-This page is intended to guide you how to render (Publish) the doc as code to PDF format.
+This page is intended to guide you how to render (Publish) the doc-as-code to PDF format.
 
 .. contents:: Table of contents
     :local:
@@ -17,12 +17,12 @@ Requirements
     mechanism is not as good as the publishing the pdf documents from latex. Thus in this chapter \
     the workaround has been documented.
 
-    Using doc as code toolchain along with additional tools will allow to publish the documents in \
+    Using doc-as-code toolchain along with additional tools will allow to publish the documents in \
     PDF format.
 
 #. Install `MikTex 2.9 <https://miktex.org/download>`_
 #. Update the system environment variable in order to the include MikTex path. For example if the \
-   miktex has been installed under directory C:\Tools\, then the path \
+   miktex has been installed under directory C:\\Tools\\, then the path \
    **C:\\Tools\\MiKTeX 2.9\\miktex\\bin** must be included in system environment variable.
 
 .. _rendering_pdf:

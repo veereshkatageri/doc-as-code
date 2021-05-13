@@ -3,7 +3,7 @@
 # Markdown Templates / On-boarding guide
 
 This file is used as an example in order to provide a ready to use Markdown file in existing \
-doc as code repository.
+doc-as-code repository.
 
 [comment]: <> (Replace ## Test integrating images by the subtitle as per the need. This is the sub section of the document)
 
@@ -13,9 +13,9 @@ The syntax to include a image file in markdown is as follows
 
 ```console
 
-![hello world](img/hello_world.png "Hellow world")
+![hello world](images/hello_world.png "Hellow world")
 ```
 
 The outcome of the above syntax is
 
-![hello world](img/hello_world.png "Hellow world")
+![hello world](images/hello_world.png "Hellow world")

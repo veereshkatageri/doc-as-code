@@ -3,7 +3,7 @@
 List and bullets
 ++++++++++++++++
 
-This page is intended to show how **List and bullets** can be used to documentation using \
+This page is intended to show how **List and bullets** can be used to document using \
 reStructuredText syntax.
 
 .. contents:: Table of contents

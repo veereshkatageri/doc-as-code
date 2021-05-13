@@ -32,34 +32,42 @@ Requirements
    * - Name
      - Version
      - Link
+     - Comments
    * - Cmder
      - v1.3.18
      - `Download fill with Git for Windows <https://github.com/cmderdev/cmder/releases/download/v1.3.18/cmder.zip>`_
-   * - chocolatey
+     - Mandatory
+   * - Chocolatey
      - 0.10.15
      - 
+     - Mandatory (Must be installed using PowerShell)
    * - Python
      - 3.6.5 or higher
      - 
+     - Mandatory (Must be installed using Chocolatey)
    * - VSCode
      - 1.48.2
      - `Download Visual Studio Code <https://code.visualstudio.com/download>`_
+     - Optional (Will allow to preview the reStructuredText)
    * - Notepad++
      - 7.8.8 release or higher
      - `Download Notepad++ <https://notepad-plus-plus.org/downloads/v7.8.8/>`_
+     - Optional (Will allow to edit the reStructuredText files easily)
    * - Notepad++ plugin
      - 1.0.0
      - - `Download plugin <https://github.com/steenhulthin/reStructuredText_NPP>`_
        - This plugin highlights the syntax of reStructuredText
+     - Optional (Will allow to visualize the syntax)
    * - Graphviz
      - dot - graphviz version 2.38.0 (20140413.2041)
      - - `Download graphviz <https://graphviz.org/download/>`_
        - Any latest stable version
-       - It must be installed to integrate plantuml diagrams
+     - Optional (Must be installed to integrate plantuml diagrams)
    * - Java
      - 1.8.0_271
      - - `Offline installation guide <https://java.com/en/download/help/windows_offline_download.html>`_
        - Version as same or higher than :ref:`Java version <java_version>`
+     - Optional (Must be installed to integrate plantuml diagrams)
 
 Installation guide
 ------------------
@@ -75,10 +83,10 @@ _____
 
     The cmder complete version contains the ready to use **git for windows**.
 
-chocolatey
+Chocolatey
 __________
 
-In order to install python without admin rights, it is required to install chocolatey. Perform \
+In order to install python without admin rights, it is required to install Chocolatey. Perform \
 the following working steps.
 
 - Create a file called **ChocolateyInstallNonAdmin.ps1** under **C:\\Tools\\**
@@ -112,13 +120,13 @@ the following working steps.
 
     netsh winhttp show proxy
 
-- Run the following command to install chocolatey
+- Run the following command to install Chocolatey
 
 .. code-block:: bash
 
     .\ChocolateyInstallNonAdmin.ps1
 
-- If installation is successful, the chocolatey version can be verified by running the following \
+- If installation is successful, the Chocolatey version can be verified by running the following \
   command
 
 .. code-block:: bash
@@ -178,7 +186,8 @@ _________
 
   .. code-block:: bash
 
-    cd Technical-Documents/onboarding_guide/
+    git clone -b master https://github.com/SiANOMTech/Technical-Documents.git
+    cd Technical-Documents/onboarding_template/
     code .
 
 #. Now VSCode will be opened and it looks as below
@@ -191,7 +200,8 @@ _________
 
         Workspace VSCode
 
-#. Click on the option **Open Preview to the Side** as highlighted in **red rectangle**
+#. Click on the option **Open Preview to the Side** as highlighted in **red rectangle**. If you do \
+   not find it, use the shortcut **Ctrl+Shift+V**.
 
     .. figure:: images/doc-as-code/vscode_01.png
         :width: 800px

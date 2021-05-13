@@ -3,7 +3,7 @@
 Importing excel documents
 +++++++++++++++++++++++++
 
-This page is intended to show how to import excel documents in doc as code.
+This page is intended to show how to import excel documents in doc-as-code.
 
 .. contents:: Table of contents
     :local:
@@ -21,7 +21,7 @@ Syntax
 Import excel document
 ---------------------
 
-The syntax to import the excel document in doc as code as follows
+The syntax to import the excel document in doc-as-code as follows
 
 .. code-block:: bash
 

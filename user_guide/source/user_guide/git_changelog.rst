@@ -3,7 +3,7 @@
 Git changelog
 +++++++++++++
 
-This page is intended to show how git changelog can be included to doc as code.
+This page is intended to show how git changelog can be included to doc-as-code.
 
 .. contents:: Table of contents
     :local:
@@ -16,7 +16,7 @@ Please visit the `sphinx-git <https://sphinx-git.readthedocs.io/en/latest/using.
 Syntax
 ======
 
-1. The following code block shows the syntax of using git changelog to doc as code.
+1. The following code block shows the syntax of using git changelog to doc-as-code.
 
 .. code-block:: rest
 

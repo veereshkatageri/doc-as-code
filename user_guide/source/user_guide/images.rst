@@ -55,7 +55,7 @@ in Markdown
 .. attention::
 
     No markdown file has been used in this repository. The following explaination has been \
-    experimented using doc as code blueprint repository.
+    experimented using doc-as-code blueprint repository.
 
 .. code-block:: bash
 

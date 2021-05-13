@@ -104,14 +104,14 @@ The syntax to embed an image in reStructuredText is follows:
 
 .. code-block:: bash
 
-    .. image:: img/hello_world.png
+    .. image:: images/hello_world.png
         :width: 800px
         :align: center
         :height: 425px
 
 It results as follows
 
-.. image:: img/hello_world.png
+.. image:: images/hello_world.png
     :width: 800px
     :align: center
     :height: 425px

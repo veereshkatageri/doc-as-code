@@ -5,14 +5,14 @@ Introduction
 
 This aim of this document is to forecast
 
-#. What is doc as code and How it works
+#. What is doc-as-code and How it works
 #. How to use onboarding template to get hands-on experience with reStructuredText
 #. How to publish documents locally
 
 .. contents:: Table of contents
     :local:
 
-What is doc as code
+What is doc-as-code
 ===================
 
 
@@ -21,12 +21,12 @@ What is doc as code
 
     Docs as Code
       Documentation as Code (Docs as Code) refers to a philosophy that the documentation will be \
-      written with the same tools as code
+      written with the same tools user for developing the code.
 
 Terminology
 ===========
 
-Before understanding how doc as code works, it is required to become familiar with the \
+Before understanding how doc-as-code works, it is required to become familiar with the \
 following terms
 
 - **reStructuredText** [1]_ (RST, ReST, or reST) is a file format for textual data used primarily \
@@ -53,36 +53,39 @@ following terms
 - **Miktex** [7]_ MiKTeX is a modern TeX distribution for Windows. MiKTeX's integrated package \
   manager installs missing components from the Internet, if required.
 
+- **Python Virtual Environment** [8]_ a self-contained directory tree that contains a Python \
+  installation and the additional packages.
+
+- **docToolchain** [9]_ is an implementation of the doc-as-code approach.
+
 How it works
 ============
 
 - The doc-as-code manual will be written down using reStructuredText.
-- The doc source will be built under python virtual environment using required python packages.
+- The doc source will be built using python virtual environment which contains required python \
+  packages.
 - The build mechanism uses conan to provide necessary parameters to conf.py so that documents \
-  of different target will be generated and segregated.
-- If build target is pdf, the conan renders the documentation source to latex and miktex will be \
-  used to convert the tex to pdf.
+  for different target will be generated and segregated.
+- If build target is pdf, the conan renders the documentation source to latex first and user miktex \
+  latex distribution to convert the latex to pdf.
 
 Big picture
 -----------
 
-The following images forecasts simple workflow how toolchain using sphinx, conan and \
-Jenkins generates the document using reStructuredText and other entities into possible target types.
+The following images shows a simple workflow on how the EFS-GH3 toolchain is using sphinx, conan, \
+CICD to generate documents or other possible target types using reStructuredText.
 
-.. attention::
-
-    The following image shows the capabilities of doc as code toolchain. It does not mean \
-    the current status. So please do not get confused.
-
-.. image:: images/doc-as-code/big_picture.png
+.. figure:: images/doc-as-code/big_picture.png
     :width: 800px
     :align: center
-    :height: 370px
+    :height: 533px
 
-What is doc as code
+    Workflow: document generation mechanism using doc-as-code and docToolchain.
+
+Further information
 ===================
 
-The doc as code offers the relevant information regarding the following
+The doc-as-code offers the relevant information regarding the following
 
 - How to implement doc-as-code methodology
 - What are the prerequisites
@@ -96,8 +99,7 @@ The doc as code offers the relevant information regarding the following
 Overview of related chapters
 ----------------------------
 
-To make sure that, the content of this manual will be read and understood as quick as possible, \
-a brief overview will be documented here.
+To enable easy navigation, an overview with related chapters and a short summary is given below.
 
 .. list-table:: Overview of related chapters
    :widths: auto
@@ -111,14 +113,14 @@ a brief overview will be documented here.
    * - :ref:`how-to_use_onboarding_template`
      - - To get hands-on experience
        - How to edit onboarding template
-       - what to do in order to include my docu
+       - What to do in order to include my docu
    * - :ref:`how-to_configure_doc_as_code_folder_structure`
-     - - to configure doc-as-code base from scratch
-       - what to modify to build new doc-as-code base
+     - - To configure doc-as-code base from scratch
+       - What to modify to build new doc-as-code base
    * - :ref:`how-to_configure_conanfile`
-     - - what to modify in conanfile
-       - standard attributes of conan
-       - customized attributes
+     - - What to modify in conanfile
+       - Standard attributes of conan
+       - Customized attributes
    * - :ref:`how-to_publish_documents`
      - - Rendering onboarding template to html
        - Publishing mechanism to confluence
@@ -128,11 +130,11 @@ a brief overview will be documented here.
        - Spellings mistakes
        - How to include filters
    * - :ref:`User guide reStructuredText <user_guide>`
-     - - syntax of restructured text
+     - - Syntax of restructured text
        - Examples of individual syntax
    * - :ref:`known_issues_onboarding_template`
      - - Known issues
-       - work around
+       - Work around
 
 .. rubric:: Footnotes
 
@@ -143,3 +145,5 @@ a brief overview will be documented here.
 .. [5] Related documentation `Cmder <https://cmder.net/>`_
 .. [6] Related documentation `conf.py <https://www.sphinx-doc.org/en/master/usage/configuration.html>`_
 .. [7] Related documentation `Miktex <https://miktex.org/>`_
+.. [8] Related documentation `venv <https://docs.python.org/3/tutorial/venv.html>`_
+.. [9] Related documentation `docToolchain <https://doctoolchain.github.io/docToolchain/v1.3.x/>`_

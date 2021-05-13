@@ -3,7 +3,7 @@
 Miscellaneous
 +++++++++++++
 
-This page is intended to cover the advanced topics of doc as code manual. This page is intended \
+This page is intended to cover the advanced topics of doc-as-code manual. This page is intended \
 only for the developers of doc-as-code toolchain team.
 
 .. contents:: Table of contents

@@ -64,7 +64,7 @@ If it is required to display the contents of external document, please make sure
 In embedding document
 _____________________
 
-The doc as code template mentions to the use the directive **.. contents::** as follows
+The doc-as-code template mentions to the use the directive **.. contents::** as follows
 
 .. code-block:: bash
 
@@ -80,7 +80,7 @@ In this scenario, the directive must be used as follows
 In external document
 ____________________
 
-It is required to use the directive **.. contents::** as mentioned by doc as code \
+It is required to use the directive **.. contents::** as mentioned by doc-as-code \
 template. i.e, 
 
 .. code-block:: bash

@@ -13,12 +13,12 @@ This directive inserts a “TOC tree” at the current location. The master docu
 master_doc in configuration file conf.py) must include this directive in order to implement \
 hierarchy tree.
 
-The following code snippet shows the hierarchy tree (folder structure of doc as code \
+The following code snippet shows the hierarchy tree (folder structure of doc-as-code \
 onboarding template)
 
 .. code-block:: rest
 
-    On-boarding guide doc as code toolchain
+    On-boarding guide doc-as-code toolchain
     +++++++++++++++++++++++++++++++++++++++
 
     .. Hint: add the description or the scope of the document 
