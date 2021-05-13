@@ -52,18 +52,18 @@ jobs:
           ls -l ${{github.workspace}}/onboarding_template
           ls -l ${{github.workspace}}/onboarding_template/build
           ls -l ${{github.workspace}}/onboarding_template/build/package/
-          ls -l ${{github.workspace}}/onboarding_template/build/package/Doc-as-Code-Tools-DocumentsPDF
+          ls -l ${{github.workspace}}/onboarding_template/build/package/Doc-as-Code-Tools-Documents-PDF
 
       # Upload zip (HTML)
       - name: Upload zip (HTML)
         uses: actions/upload-artifact@v1
         with:
           name: Doc-as-Code-Tools-Documents-Html.zip
-          path: ${{github.workspace}}/user_guide/build/Doc-as-Code-Tools-Documents-Html.zip
+          path: ${{github.workspace}}/onboarding_template/build/Doc-as-Code-Tools-Documents-Html.zip
 
       # Upload PDF
       - name: Upload PDF
         uses: actions/upload-artifact@v1
         with:
           name: Doc-as-Code-Tools-Documents.pdf
-          path: ${{github.workspace}}/user_guide/build/Doc-as-Code-Tools-Documents-PDF/Doc-as-Code-Tools-Documents.pdf
+          path: ${{github.workspace}}/onboarding_template/build/Doc-as-Code-Tools-Documents-PDF/Doc-as-Code-Tools-Documents.pdf

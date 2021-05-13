@@ -52,7 +52,7 @@ jobs:
           ls -l ${{github.workspace}}/user_guide
           ls -l ${{github.workspace}}/user_guide/build
           ls -l ${{github.workspace}}/user_guide/build/package/
-          ls -l ${{github.workspace}}/user_guide/build/package/Doc-as-Code-Tools-DocumentsPDF
+          ls -l ${{github.workspace}}/user_guide/build/package/Doc-as-Code-Tools-Documents-PDF
 
       # Upload zip (HTML)
       - name: Upload zip (HTML)
