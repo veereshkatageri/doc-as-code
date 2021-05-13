@@ -17,6 +17,7 @@ cpp
 csv
 docAsCode
 DocAsCodeManaulHtml
+docToolchain
 doctrees
 docu
 experiance
@@ -32,6 +33,7 @@ img
 includehidden
 ios
 iOS
+IncludeLists
 jpeg
 jupyter
 labelled
@@ -90,3 +92,4 @@ VScode
 whitespace
 Wikipage
 wordlist
+yml
