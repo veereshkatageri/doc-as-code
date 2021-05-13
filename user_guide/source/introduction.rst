@@ -129,6 +129,9 @@ To enable easy navigation, an overview with related chapters and a short summary
      - - Quality checks
        - Spellings mistakes
        - How to include filters
+   * - :ref:`cicd_setup`
+     - - How to generate documents using Github actions
+       - How to configure Github actions
    * - :ref:`User guide reStructuredText <user_guide>`
      - - Syntax of restructured text
        - Examples of individual syntax
