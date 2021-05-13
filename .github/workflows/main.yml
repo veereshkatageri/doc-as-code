@@ -56,7 +56,7 @@ jobs:
 
       # Upload Artifacts
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v1
+        uses: actions/upload-artifact@v2
         with:
           name: Doc-as-Code-Tools-Documents-Html.zip
           path: |
