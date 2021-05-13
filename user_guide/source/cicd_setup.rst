@@ -56,7 +56,7 @@ Original content
 
 .. code-block:: bash
 
-# This is a basic workflow to help you get started with Actions
+    # This is a basic workflow to help you get started with Actions
 
     name: CI
 

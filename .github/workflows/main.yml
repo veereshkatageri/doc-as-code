@@ -54,16 +54,11 @@ jobs:
           ls -l ${{github.workspace}}/user_guide/build/package/
           ls -l ${{github.workspace}}/user_guide/build/package/Doc-as-Code-Tools-Documents-PDF
 
-      # Upload zip (HTML)
-      - name: Upload zip (HTML)
+      # Upload Artifacts
+      - name: Upload Artifacts
         uses: actions/upload-artifact@v1
         with:
           name: Doc-as-Code-Tools-Documents-Html.zip
-          path: ${{github.workspace}}/user_guide/build/Doc-as-Code-Tools-Documents-Html.zip
-
-      # Upload PDF
-      - name: Upload PDF
-        uses: actions/upload-artifact@v1
-        with:
-          name: Doc-as-Code-Tools-Documents.pdf
-          path: ${{github.workspace}}/user_guide/build/package/Doc-as-Code-Tools-Documents-PDF/Doc-as-Code-Tools-Documents.pdf
+          path: |
+            ${{github.workspace}}/user_guide/build/Doc-as-Code-Tools-Documents-Html.zip
+            ${{github.workspace}}/user_guide/build/package/Doc-as-Code-Tools-Documents-PDF/Doc-as-Code-Tools-Documents.pdf
