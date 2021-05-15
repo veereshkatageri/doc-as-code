@@ -44,7 +44,7 @@ plantuml = "java -jar " + path_plantuml
 
 # spelling wordlists
 spelling_word_list_filename = os.path.join(os.path.dirname(os.path.dirname(os.getcwd())),
-                                                           'Technical-Documents', 'onboarding_template',
+                                                           'Technical-Documents', 'hello_doc_as_code',
                                                            'source', 'spelling_wordlist.txt')
 
 # customized variables
