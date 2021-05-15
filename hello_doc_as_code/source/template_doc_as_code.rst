@@ -59,3 +59,13 @@ How to ignore specific technical term
 =====================================
 
 Powershell is required to install packages from windows package registry.
+
+Git changelog
+=============
+
+.. hint::
+
+    The following is the git changelog
+
+.. git_changelog::
+    :revisions: 10
