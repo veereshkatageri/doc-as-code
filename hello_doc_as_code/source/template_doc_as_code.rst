@@ -10,7 +10,7 @@ The scope of this document it to integrate the following.
 #. include glossary
 #. cross reference
 #. numbered lists/bullet lists
-#. Hirearchy of the chapters
+#. Hierarchy of the chapters
 #. How to ignore specific technical term
 #. git changelog
 
@@ -37,7 +37,7 @@ include glossary
 
 See reference :ref:`Template <template_glossary>`
 
-Hirearchy of the chapters
+Hierarchy of the chapters
 =========================
 
 Subsection
