@@ -45,11 +45,11 @@ jobs:
         shell: bash
         run: |
           ls -l ${{github.workspace}}
-          python -m venv ./${{github.workspace}}/onboarding_template/venv
-          source ./${{github.workspace}}/onboarding_template/venv/bin/activate
-          pip install -r ${{github.workspace}}/onboarding_template/requirements.txt
-          conan install ${{github.workspace}}/onboarding_template -if ${{github.workspace}}/onboarding_template/build -o generate_pdf=True
-          conan build ${{github.workspace}}/onboarding_template -bf ${{github.workspace}}/onboarding_template/build
+          python -m venv ./${{github.workspace}}/hello_doc_as_code/venv
+          source ./${{github.workspace}}/hello_doc_as_code/venv/bin/activate
+          pip install -r ${{github.workspace}}/hello_doc_as_code/requirements.txt
+          conan install ${{github.workspace}}/hello_doc_as_code -if ${{github.workspace}}/hello_doc_as_code/build -o generate_pdf=True
+          conan build ${{github.workspace}}/hello_doc_as_code -bf ${{github.workspace}}/hello_doc_as_code/build
 
       # Upload Artifacts
       - name: Upload Artifacts
@@ -57,5 +57,5 @@ jobs:
         with:
           name: Artifacts-Onboarding
           path: |
-            ${{github.workspace}}/onboarding_template/build/Doc-as-Code-Tools-Documents-Html.zip
-            ${{github.workspace}}/onboarding_template/build/package/Doc-as-Code-Tools-Documents-PDF/Doc-as-Code-Tools-Documents.pdf
+            ${{github.workspace}}/hello_doc_as_code/build/Doc-as-Code-Tools-Documents-Html.zip
+            ${{github.workspace}}/hello_doc_as_code/build/package/Doc-as-Code-Tools-Documents-PDF/Doc-as-Code-Tools-Documents.pdf
