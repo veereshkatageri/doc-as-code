@@ -54,6 +54,7 @@ class ConanRecipe(ConanFile):
         print('self.options.generate_pdf:', self.options.generate_pdf)
 
         command = subprocess.check_output(['sphinx-build', '--version']).decode("utf8")
+        print('command:', command.strip())
         if not (version.parse(command.strip()) == version.parse("sphinx-build 2.4.4") or
                 version.parse(command.strip()) > version.parse("sphinx-build 2.4.4")):
             self.output.error("Sphinx Requirements are not satisfied")
