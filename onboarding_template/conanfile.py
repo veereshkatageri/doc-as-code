@@ -7,23 +7,19 @@ import subprocess
 import platform
 from packaging import version
 
-docu_generation_type = os.environ.get('DOCU_GENERATION_TYPE')
-if docu_generation_type is None:
-    docu_generation_type = 'generate_html'
-
 # standard attributes
-var_name = "Doc_as_Code_Tools_Documents"
+var_name = "Doc-as-Code-Tools-Documents"
 var_version = "0.0.1"
 var_description = "User manual"
 
 # customized attribute
 # adjust var_parent_dir_config_file accordingly if it is not a single folder
 var_parent_dir_config_file = 'onboarding_template'
-var_folder_html = "Doc_as_Code_Tools-DocumentsHtml"
-var_folder_spelling = "Doc_as_Code_Tools-DocumentsSpelling"
-var_folder_confluence = "Doc_as_Code_Tools-DocumentsConfluence"
-var_folder_pdf = "Doc_as_Code_Tools-DocumentsPDF"
-var_tex_file = "Doc_as_Code_Tools-Documents.tex"
+var_folder_html = "Doc-as-Code-Tools-Documents-Html"
+var_folder_spelling = "Doc-as-Code-Tools-Documents-Spelling"
+var_folder_confluence = "Doc-as-Code-Tools-Documents-Confluence"
+var_folder_pdf = "Doc-as-Code-Tools-Documents-PDF"
+var_tex_file = "Doc-as-Code-Tools-Documents.tex"
 
 """
 # TODO: The following part can be ignored
@@ -45,13 +41,18 @@ class ConanRecipe(ConanFile):
     settings        = "os", "arch"
     scm             = { "type": "git", "url": "auto", "revision": "auto" }
     no_copy_source  = True
-    options = {}
-    default_options = {}
+    options = {"publish_confluence": [True, False],
+               "generate_pdf": [True, False]}
+    default_options = {
+        "publish_confluence": False,
+        "generate_pdf" : False}
 
     # Set version in configuration file conf.py
     os.environ["version"] = version
 
     def build_requirements(self):
+        print('self.options.generate_pdf:', self.options.generate_pdf)
+
         command = subprocess.check_output(['sphinx-build', '--version']).decode("utf8")
         if not (version.parse(command.strip()) == version.parse("sphinx-build 2.4.4") or
                 version.parse(command.strip()) > version.parse("sphinx-build 2.4.4")):
@@ -109,23 +110,28 @@ class ConanRecipe(ConanFile):
         print("End spelling check")
 
         # -- target build confluence ----------------------------------
-        if (docu_generation_type == 'publish_confluence'):
+        if (self.options.publish_confluence):
             print("Begin publishing to confluence")
+            os.environ["DOCU_GENERATION_TYPE"] = 'publish_confluence'
             output_folder = os.path.join(self.build_folder, 'package', var_folder_confluence)
             os.makedirs(output_folder, exist_ok=True)
             try:
                 command = subprocess.run(['sphinx-build', '-b', 'confluence', input_folder,
                                             output_folder], check=True)
+                # make archieve
+                shutil.make_archive(var_folder_confluence, 'zip', output_folder)
             except subprocess.CalledProcessError as err:
                 print(err.output)
             print("End publishing to confluence")
 
         # -- target build pdf ----------------------------------------
-        if (docu_generation_type == 'generate_pdf'):
+        if (self.options.generate_pdf):
             print("Begin generating pdf")
             os.environ["DOCU_GENERATION_TYPE"] = 'generate_pdf'
             output_folder = os.path.join(self.build_folder, 'package', var_folder_pdf)
             os.makedirs(output_folder, exist_ok=True)
+
+            print("Log: folders have been created")
 
             try:
                 # Build to target latex first

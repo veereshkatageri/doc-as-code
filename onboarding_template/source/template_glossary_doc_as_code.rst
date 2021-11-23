@@ -25,9 +25,6 @@
 
 .. Hint: change the title Template - Glossary to Template - Hello World Glossary as follows
 
-    Template - Hello World
-    ++++++++++++++++++++++
-
     Template - Hello World Glossary
     +++++++++++++++++++++++++++++++
 

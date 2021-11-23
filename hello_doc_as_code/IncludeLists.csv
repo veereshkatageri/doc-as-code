@@ -1,0 +1,3 @@
+#file_name;generate_html;publish_confluence;generate_pdf;
+index.rst;True;True;True;
+venv;False;False;False;
